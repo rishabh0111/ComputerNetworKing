@@ -1,12 +1,7 @@
 # computerNetworKing
 A comprehensive GitHub repository covering computer networking from basics to advanced, aimed at engineering placements and global networking certifications.
-
-# # Computer Networks
-
-<aside>
+---
 💡 A **computer network** is a collection of interconnected devices that enable **data exchange** and **resource sharing** among multiple devices.
-
-</aside>
 
 # Basics
 
