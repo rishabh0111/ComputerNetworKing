@@ -1004,14 +1004,15 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - Similarly, the **Transport Layer** requires a **Port number** to correctly deliver the ***segments*** of data to the correct ***process*** among multiple processes running on a particular host.
     - A **port number** is a **16-bit address** used to identify any client-server program uniquely.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2043.png)
-        
+        ![Untitled 43](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/83211b28-37e3-46cf-b89c-f01d3814dd89)
+
 - ****2. End-to-end Connection between Hosts****
     - The **transport layer** is responsible for creating the end-to-end connection between hosts, primarily using **TCP** and **UDP.**
     - **TCP** is a secure, connection-oriented protocol that uses a **handshake protocol** to establish connection between two end hosts and it ensures **reliable delivery** of messages.
     - **UDP**, is a **stateless** and **unreliable protocol** that ensures **best-effort delivery**. It is suitable for applications that have little concern with flow or error control and require sending a bulk of data, such as video conferencing. It is often used in multicasting protocols.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2044.png)
+      ![Untitled 44](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/45f0abf3-e467-4dc3-92e1-70b6cc80a310)
+
         
 - ****3. Multiplexing and Demultiplexing****
     - **Multiplexing** (many to one) is the process of acquiring data from several processes at the sender's side and merging it into one packet along with headers, sending it as a single packet.
@@ -1019,8 +1020,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - **Demultiplexing** (one to many) is required at the receiver's side. It involves distributing the received message into different processes.
     - The **transport layer** receives segments of data from the network layer and **demultiplexes** them, delivering each segment to the appropriate process running on the receiver's machine.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2045.png)
-        
+        ![Untitled 45](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/747f53d8-763d-4a7a-bfbb-a1a81e2e0e79)
+
 - ****4. Congestion Control****
     - **Congestion** occurs when there are too many sources over a network trying to send data, causing the router buffers to **overflow** and resulting in **packet loss** and **retransmission**.
     - **Types of Congestion Control Algorithms**:
@@ -1030,14 +1031,14 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
             3. Bursty traffic is converted to a uniform traffic by the leaky bucket.
             4. In practice the bucket is a finite queue that outputs at a finite rate.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2046.png)
-            
+            ![Untitled 46](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/c2c1af13-b813-46b8-b77f-f612c83ec309)
+
         2. **Token bucket Algorithm**
             - The **token bucket algorithm** is a more flexible alternative to the leaky bucket algorithm for network traffic shaping or rate-limiting.
             - In the token bucket algorithm, packets are transmitted based on the availability of tokens in the bucket. Tokens are generated at each tick, and incoming packets need to capture a token to be transmitted at the same rate. This introduces flexibility in transmitting **bursty packets** if tokens are available.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2047.png)
-            
+            ![Untitled 47](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e1de6e3d-03ff-435d-8614-c9f7262465a7)
+
             **Figure (A):** Bucket holds 3 tokens, 5 packets wait. Packets require tokens for transmission. **Figure (B):** 3 packets transmitted, 2 packets wait for more tokens.
             
     - **TCP Congestion Control**
@@ -1052,8 +1053,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
                 | After a round trip of 2 | (2)2 | 4 MSS |
                 | After a round trip of 3 | (2)3 | 8 MSS |
                 
-                ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2048.png)
-                
+                ![Untitled 48](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/9ef85fe1-8fc0-452c-ae21-07a7ab5642e7)
+
             2. **Congestion Avoidance Phase:** After the threshold is reached, the size of the congestion window is increased by the sender **linearly** in order to avoid congestion. Each time an acknowledgment is received, the sender increments the size of the congestion window by 1.
                 
                 The **formula** for determining the size of the congestion window in this phase is Congestion window size = Congestion window size + 1.
@@ -1081,13 +1082,13 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
                     - Decreasing the size of the **congestion window** to that of the **slow start threshold.**
                     - The **congestion avoidance** phase is resumed.
                 
-                ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2049.png)
-                
+                ![Untitled 49](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a1f640e0-d9bf-4cf9-a285-bba11b5d2287)
+
 - ****5. Data integrity and Error Correction****
     - The **transport layer** performs error detection in messages from the **application layer** using **error detection codes** and **checksums**. It verifies that received data is not corrupted and utilizes **ACK** (Acknowledgment) and **NACK** (Negative Acknowledgment) services to inform the sender about the arrival status of the data. The transport layer also ensures the **integrity** of the data.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2050.png)
-        
+        ![Untitled 50](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/b7c31f2f-0327-4f4f-9991-9479d9584f48)
+
         - **Error Control in TCP**
             - TCP protocol has methods for finding out **corrupted segments**, **missing segments**, **out-of-order segments**, and **duplicated segments**.
             - Error control in TCP is mainly done through the use of three simple techniques:
@@ -1122,15 +1123,15 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - The client creates a socket and attempts to connect to the server socket.
     - Once the connection is established, data transfer takes place.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2051.png)
-    
+    ![Untitled 51](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e491e4b7-9853-4d62-9d53-2f8618c811c6)
+
 - **Types of Sockets :**
     - **Datagram Socket**: A network type with **connectionless communication**, similar to a **mailbox** where posted data packets are collected and delivered to a receiving socket.
     - **Stream Socket**: An interprocess or network socket that provides a **connection-oriented**, **sequenced flow of data** without record boundaries. It is similar to a **phone** where a connection is established between two ends and data is transferred during a conversation.
 - **Socket Function Calls:**
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2052.png)
-    
+    ![Untitled 52](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/9cb592bc-4a5a-44f2-841c-3cfc9cb8c8af)
+
     | Function Call | Description |
     | --- | --- |
     | Socket() | To create a socket |
@@ -1154,12 +1155,11 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
 - **Sequence number**: Segments are given sequence numbers to ensure proper reassembly of bytes at the receiver end, even if they arrive out of order. The sequence number of a segment corresponds to the byte number of the first byte being sent.
 - **Acknowledgement number**: TCP provides full-duplex service, so an acknowledgement number is required. It represents the next byte number that the receiver expects to receive and serves as an acknowledgement for receiving the previous bytes.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2053.png)
-    
+    ![Untitled 53](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/b48c5a94-412e-4a9b-8891-b55ad2a24233)
+
     A sends acknowledgement number 1001, indicating it has received data bytes up to 1000 and expects 1001 next. B acknowledges receiving data bytes up to 13001 and sends acknowledgement number 13002 for the next expected byte from A.
     
-
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2054.png)
+![Untitled 54](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/99d856d2-72eb-49aa-98bd-5d5e94e4fd9f)
 
 - **Source Port Address –** A 16-bit field that holds the port address of the application that is sending the data segment.
 - **Destination Port Address –** A 16-bit field that holds the port address of the application in the host that is receiving the data segment.
@@ -1189,10 +1189,10 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - **Step 2 (SYN + ACK):** Server responds to the client request with SYN-ACK signal bits set. Acknowledgement(ACK) signifies the response of the segment it received and SYN signifies with what sequence number it is likely to start the segments with
     - **Step 3 (ACK):** In the final part client acknowledges the response of the server and they both establish a reliable connection with which they will start the actual data transfer.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2055.png)
-    
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2056.png)
-    
+    ![Untitled 55](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f649cb43-1f65-41de-b117-b14e5b3aaf44)
+
+    ![Untitled 56](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/fa47a51d-a8a7-4a53-95dc-eacc0d4ad442)
+
 
 ### **TCP Connection Establishment & Termination**
 
@@ -1215,8 +1215,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - **Acknowledgement Number (Ack no.=2001)**: Acknowledges the receiver's packet and specifies the next expected sequence number.
     - **ACK flag (ACK=1)**: Indicates that the acknowledgement number field contains the next expected sequence number.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2057.png)
-    
+    ![Untitled 57](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f0c11f07-6230-4253-a889-78826d326922)
+
 
 ### **Connection Termination**
 
@@ -1241,15 +1241,15 @@ TCP supports two types of connection releases:
 6. The client remains in the **TIME_WAIT** state for a certain period to allow for retransmission of the final acknowledgment.
 7. After the wait, the connection formally closes, and all resources on the client-side are released.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2058.png)
-    
+    ![Untitled 58](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a0adef80-1729-470c-b2be-62e322b1de05)
+
 
 ### **Piggybacking**
 
 - Piggybacking is the technique of **delaying outgoing acknowledgments** and **attaching them to the next data packet**, allowing the **acknowledgment to travel along** with the subsequent data frame.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2059.png)
-    
+    ![Untitled 59](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/1594379b-06e1-4fd2-9fab-792b73b4ad6c)
+
 - **Networking Communication:** Sliding window algorithms control network data transfer by allowing the sender to have **multiple acknowledgments** at a time. A **finite-size buffer** is maintained by both the sender and receiver to hold packets. **Timers** ensure unacknowledged packets are resent, while the sender can transmit a **window of packets** before receiving the first acknowledgment. This improves transfer rates, while the receiver advertises a **window size** to prevent buffer overflow.
 - **How To Increase Network Efficiency?:** Efficiency can be improved by utilizing the **Full-duplex transmission mode**, which enables simultaneous **two-way communication**, similar to using **two half-duplex transmission nodes**.
 - **Why Piggybacking?:** Efficiency is enhanced in full-duplex transmission by utilizing **piggybacking** or **two separate channels**, where each channel transmits **data frames** and **acknowledgments** bidirectionally with equal capacity. In piggybacking, the **receiver waits** until the next data packet before sending the acknowledgment, which travels alongside the **outgoing data frame**.
@@ -1261,17 +1261,14 @@ TCP supports two types of connection releases:
 - User Datagram Protocol (UDP) is a **connectionless** and **unreliable** Transport Layer protocol in the UDP/IP suite, offering **low-latency** and **loss-tolerating** communication without the need for prior connection establishment.
 - **UDP Header:**
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2060.png)
-    
+    ![Untitled 60](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/fa9fa339-3536-48f4-bf87-b67adda6af0f)
+
     - **Source Port:** Source Port is a 2 Byte long field used to identify the port number of the source.
     - **Destination Port:** It is a 2 Byte long field, used to identify the port of the destined packet.
     - **Length:** Length is the length of UDP including the header and the data. It is a 16-bits field.
     - **Checksum:** Checksum is 2 Bytes long field. It is the 16-bit one’s complement of the one’s complement sum of the UDP header, the pseudo-header of information from the IP header, and the data, padded with zero octets at the end (if necessary) to make a multiple of two octets.
     
-    <aside>
-    💡 **Notes –** Unlike TCP, the Checksum calculation is not mandatory in UDP. No Error control or flow control is provided by UDP. Hence UDP depends on IP and ICMP for error reporting. Also UDP provides port numbers so that is can differentiate between users requests.
-    
-    </aside>
+    > 💡 **Notes –** Unlike TCP, the Checksum calculation is not mandatory in UDP. No Error control or flow control is provided by UDP. Hence UDP depends on IP and ICMP for error reporting. Also UDP provides port numbers so that is can differentiate between users requests.
     
 - ***Applications of UDP:***
     - Used for **simple request-response** communication when the size of data is less and there is lesser concern about flow and error control.
@@ -1443,8 +1440,8 @@ TCP supports two types of connection releases:
         | HTTP does not use data hashtags to secure data. | HTTPS will have the data before sending it and returning it to its original state on the receiver side. |
         | HTTP is used to transfer text, video, and images via web pages. | HTTPS is used to transfer data securely via a network. |
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2061.png)
-        
+        ![Untitled 61](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/7db4128a-b806-4e16-9565-093e67d788a0)
+
     8. **SMTP (**Simple Mail Transfer Protocol)
         - It is a part of the **TCP/IP protocol**. It uses a **"store and forward"** process to move email across networks.
         - SMTP works in conjunction with the **Mail Transfer Agent (MTA)** to ensure that your emails are sent to the correct computer and delivered to the intended email inbox.
@@ -1480,8 +1477,8 @@ TCP supports two types of connection releases:
     
 - **Types of DOMAIN:**
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2062.png)
-    
+    ![Untitled 62](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/314b0eff-bf31-479f-8c92-0a7450d53d6e)
+
     1. **Generic domains:** .com(commercial), .edu(educational), .mil(military), .org(nonprofit organization), .net(similar to commercial) all these are generic domains.
     2. **Country domain:** .in (India) .us .uk
     3. **Inverse domain:** It is used to map an address to a name. When a server receives a request from a client, it checks if the client is authorized by sending a query to the **DNS server** for mapping the address to the name.
@@ -1501,18 +1498,18 @@ TCP supports two types of connection releases:
     - A **domain** is a unique name for an area of control, while a **zone** is a collection of **nodes** (subdomains) under a main domain, each with its own **zone file database** on the server; if a domain lacks subdomains, the terms domain and zone are used interchangeably.
         
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2063.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2064.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2065.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2066.png)
-        
+        ![Untitled 63](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/9744cb16-21bf-4bc1-87c2-8e56a6cdf66b)
+
+        ![Untitled 64](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e7fbe31d-9f61-41f6-89f1-04a3f3c58643)
+
+        ![Untitled 65](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/0665d7ae-16e4-4d8c-bb13-c178bec911c3)
+
+        ![Untitled 66](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f019f3a1-807c-4a9c-bfc5-965610437152)
+
     - **Hierarchy & Types of Name Servers:**
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2067.png)
-        
+        ![Untitled 67](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/71f223e3-96a9-4763-80e5-59110f5a8302)
+
         1. **Root Server**: The top-level server in the DNS hierarchy that consists of the entire DNS tree. It does not contain the information about domains but **delegates the authority** to other servers. **13 global root servers** form the top-level of the DNS hierarchy.
         2. **Primary Server**: An Authoritative server that stores a file about its zone, having the authority to **create, maintain, and update** the zone file. A primary server loads all information from the **disk file**.
         3. **Secondary Server**: An Authoritative server that transfers complete information about a zone from another server, which may be a primary or secondary server. The secondary server does not have authority to create or update a zone file. It loads all information from the **primary server**.
@@ -1536,14 +1533,14 @@ TCP supports two types of connection releases:
             
             The **client** requests the **Local Server** for a mapping or error message, generating a **DNS Query** to the resolver. The query is forwarded to the **local DNS Server**, and if the **IP Address** is known, a response is sent. Otherwise, it is sent to the **root name server** and then to the respective **Top-Level Domain** server. If the mapping is found, it is returned; otherwise, the **IP Address** of the destination's local DNS Server is provided, and the process is reversed back to the host's Local DNS Server, and finally to the host.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2068.png)
-            
+            ![Untitled 68](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f7893e9b-9d8a-4055-9050-7c863d3b7949)
+
         2. **Iterative Resolution**
             
             In **iterative resolution**, servers pass the **IP Address** of the next server, allowing the client to receive the best match or referral. A **DNS Query** is generated and forwarded through the **local DNS Server**, **root name server**, and **Top-Level Domain** server to obtain the destination host's **IP Address**. The response is then delivered from the host's **local DNS server** to the **resolver** and finally to the host.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2069.png)
-            
+            ![Untitled 69](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f58c4a2c-9f84-4948-b821-bed2bc27db1b)
+
         
         | Property | Iterative Resolution | Recursive Resolution |
         | --- | --- | --- |
@@ -1562,8 +1559,8 @@ TCP supports two types of connection releases:
     2. **Distributed Denial of Service (DDoS)**, where the attacker controls numerous computers to flood the victim's system with traffic;
     3. **DNS spoofing**, It means getting a wrong entry or IP address of the requested site from the DNS server. Attackers find out the flaws in the DNS system and take control and will redirect to a malicious website.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2070.png)
-        
+        ![Untitled 70](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/8ce638d9-864e-4289-a515-9d703384c02f)
+
         To prevent DNS spoofing, **DNS Security Extensions (DNSSEC)** add an additional layer of security by digitally 'signing' data, implementing **source authentication** using techniques like **IPsec or TLS**, utilizing **response rate limiting** to reduce DNS amplification attacks, implementing **DNS filtering** to block traffic to known malicious domains or IP addresses, employing **DNS monitoring and analysis** to detect anomalies, and regularly updating **DNS software and patches** to prevent known vulnerabilities from being exploited.
         
     4. **Fast flux**, a technique that constantly changes location-based data to conceal the attacker's origin; 
@@ -1620,8 +1617,8 @@ TCP supports two types of connection releases:
     - The IP helper address is the IP address of the DHCP server and is used as the destination address for packets containing **255.255.255.255**.
     - By updating packets with the IP helper address, **DORA messages** (Discover, Offer, Request, Acknowledge) can be exchanged with the DHCP server located outside the local LAN.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2071.png)
-    
+    ![Untitled 71](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/986760d1-3b92-48f4-bd4a-5f6b89231160)
+
     1. PC1 sends Discover message but doesn’t find DHCP server in local LAN.
     2. R1 now receive IP packet and change destination address to DHCP server address i.e., 14.0.10.1 and sender address to its own outgoing interface address i.e., Gi0/2 interface address. R1 does this because of configuration of IP helper address.
     3. IP packet forwarded by R1 is received by DHCP server and respond to this Discover message.
@@ -1638,13 +1635,11 @@ TCP supports two types of connection releases:
     7. **DHCP release:** A DHCP client sends a DHCP **release packet** to the server to release the IP address and cancel any remaining lease time.
     8. **DHCP inform:** If a client manually obtains an IP address, it uses DHCP information for other **local configuration parameters**, such as the **domain name**. The server responds with a unicast **DHCP ack** message, providing a suitable local configuration for the client without assigning a new IP address.
     
-    <aside>
-    💡 All the messages can be unicast also by the **DHCP relay agent** if the server is present in a **different network**.
+    > 💡 All the messages can be unicast also by the **DHCP relay agent** if the server is present in a **different network**.
+
     
-    </aside>
-    
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2072.png)
-    
+    ![Untitled 72](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f5eaafd3-0898-49cd-b75a-9acaec00e8f6)
+
 - **Advantages & Disadvantages of DHCP**
     - *Advantages* of using **DHCP** include **centralized management** of IP addresses, **automated TCP/IP configuration**, ease of **adding new clients**, **reuse of IP addresses**, efficient handling of **IP address changes**, simple reconfiguration of the IP address space, and easy handling of **new users**.
     - *Disadvantage* of using **DHCP** includes the potential for **IP conflicts**, security risks due to acceptance of connections from **unauthorized servers**, inability to access the network without a **DHCP server**, and the lack of automatic **machine name updates** when a new IP address is assigned.
@@ -1653,8 +1648,8 @@ TCP supports two types of connection releases:
     - It allows clients to communicate with servers using conventional **procedure calls**.
     - RPC works similar to a **function call**, where arguments are passed to a remote procedure and the caller waits for a response.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2073.png)
-        
+        ![Untitled 73](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/33d04b0a-e9b1-46fa-9291-c7e9d7eb6b5e)
+
     - Features/Characteristics of RPC include a **well-defined interface**, execution within the **server process**, communication between processes on the same or different **machines**, and passing parameters by **values**.
     - Advantages of RPC include facilitating communication between clients and servers, supporting **process and thread-oriented models**, hiding internal message passing mechanisms from the user, enabling usage in **distributed environments**, and minimizing re-writing efforts.
     - Drawbacks of RPC include potentially higher calling time compared to local procedures, vulnerability to failures due to involving different machines and processes, lack of standardization in implementation, limited flexibility for **hardware architecture**, and increased process cost.
@@ -1729,12 +1724,12 @@ TCP supports two types of connection releases:
 - ****What is a reverse proxy?****
     - A **proxy server** acts as a middleman between client machines and web servers, intercepting and forwarding requests on behalf of clients, often used to **bypass restrictions**, **control access to content**, or enhance online **anonymity**.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2074.png)
-        
+        ![Untitled 74](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/307a7557-5d24-4d26-b0eb-ab4c4b06ae98)
+
     - A **reverse proxy** intercepts client requests and forwards them to **origin servers**, providing benefits such as **load balancing**, protection from **attacks**, **global server load balancing (GSLB)**, **caching**, and **SSL encryption**.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2075.png)
-        
+        ![Untitled 75](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/c40e0ad2-3a6a-48d9-8c40-1c520661e82c)
+
 - ****What Is Load Balancing?****
     
     Load balancing efficiently distributes network traffic across multiple **servers**, ensuring high **availability**, scalability, and reliability, while providing benefits such as reduced **downtime**, **redundancy**, **flexibility**, and improved **efficiency**.
