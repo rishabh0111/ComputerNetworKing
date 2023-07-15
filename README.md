@@ -271,7 +271,7 @@ physical layer.
 
 The **Data Link Layer** provides an interface to the **Network Layer** in the OSI model, facilitating the transmission of data frames from the sending machine's Data Link Layer to the receiving machine's Network Layer through either **actual communication** using a physical medium or **virtual communication** using a data link protocol.
 
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%205.png)
+![Untitled 5](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/d0ca731d-04ef-4396-9b67-09aa8fe55bb3)
 
 **Types of Services provided by Data Link Layer :**
 
@@ -335,16 +335,16 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
     - **Types of Errors**
         - **Single-Bit Error**
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%206.png)
-            
+            ![Untitled 6](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/dfd106de-df20-4774-98d4-5ea1bb7000a6)
+
         - **Multiple-Bit Error**
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%207.png)
-            
+            ![Untitled 7](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/4b19715a-7d95-4d3f-8e21-bc40b44a42c6)
+
         - **Burst Error** (consecutive bits****)****
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%208.png)
-            
+            ![Untitled 8](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/b712a899-ef7d-4848-a179-84e5c215cdf2)
+
     - **Error Detection Methods**
         1. **Simple Parity Check**
             
@@ -357,14 +357,14 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
             
             • Single Parity check is not able to detect even no. of bit error.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%209.png)
-            
+            ![Untitled 9](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/b2e708e4-667b-4bcd-9d9a-9d8c980347a9)
+
         2. **2D Parity Check**
             
             **2D Parity** check bits are calculated for **each row**, like a **simple parity check**. **Parity check** bits are also calculated for **columns**. Both are sent with the **data**. At the receiving end, they're compared to the calculated **parity bits**.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2010.png)
-            
+            ![Untitled 10](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/c5db70b5-fe1e-4bb2-9dfc-296efa076f5b)
+
         3. **Checksum**
             
             Sender’s Side:
@@ -379,14 +379,14 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
             - The sum is **complemented**.
             - If the result is **zero**, the received data is accepted; otherwise, discarded.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2011.png)
-            
+            ![Untitled 11](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/87560d04-cba9-4f6a-832d-b4e2f67d108f)
+
         4. **Cyclic Redundancy Check (CRC)**
             
-            ![detect14.jpg](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/detect14.jpg)
-            
-            ![detect15.jpg](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/detect15.jpg)
-            
+            ![detect14](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a7ac291d-a689-469b-a347-e8dd400fdaf2)
+
+            ![detect15](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/0ab2cd11-7465-4156-bc14-4f9cbde7120e)
+
 2. **Error Correction**
     - It gives the receiver the ability to correct errors without needing a reverse channel to request re-transmission of data.
     - **Error Correction Techniques:**
@@ -399,13 +399,12 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
 1. **Stop-and-Wait ARQ**
     - Useful Terms:
         
-        <aside>
-        💡 > **Propagation Delay:** Amount of time taken by a packet to make a physical journey from one router to another router.
-        > **RoundTripTime** (**RTT**) = Amount of time taken by a packet to reach the receiver + Time taken by the Acknowledgement to reach the sender
-        > **TimeOut** (**TO**) =  2* RTT
-        > **Time To Live** (**TTL**) = 2* TimeOut. (Maximum TTL is 255 seconds)
-        
-        </aside>
+        >>>
+        💡 **Propagation Delay:** Amount of time taken by a packet to make a physical journey from one router to another router.
+        **RoundTripTime** (**RTT**) = Amount of time taken by a packet to reach the receiver + Time taken by the Acknowledgement to reach the sender
+        **TimeOut** (**TO**) =  2* RTT
+        **Time To Live** (**TTL**) = 2* TimeOut. (Maximum TTL is 255 seconds)
+        >>>
         
     
     ### **Characteristics of Stop and Wait ARQ**
@@ -419,8 +418,8 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
     1. Sender A **sends a data frame** or packet with sequence number **0**.
     2. Receiver B, after receiving the data frame, **sends an acknowledgement** with sequence number **1** (the sequence number of the next expected data frame or packet)
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2012.png)
-    
+    ![Untitled 12](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/b7792c9d-07e9-4e65-a9d3-5ce3a7d05cc8)
+
     There is only a one-bit sequence number that implies that both sender and receiver have a buffer for one frame or packet only.
     
     ### Advantages of Stop and Wait ARQ
@@ -449,8 +448,9 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
             - GBN uses two types of acknowledgements: cumulative ack and independent ack. **Cumulative ack** acknowledges **multiple** packets, reducing traffic but lowering reliability. While **Independent ack** acknowledges **each** packet independently, increasing reliability but causing higher traffic.
             - GBN requires a minimum of N+1 sequence numbers to avoid duplicate packet issues.
                 
-                ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2013.png)
-                
+                ![Untitled 13](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/85bca7f3-73ea-4475-847e-664c40e2b40f)
+
+
         2. **Selective Repeat Protocol (SRP) :**
             - **Selective Repeat Protocol (SRP)** is a variation of the **Go Back N (GBN)** protocol.
             - SRP uses buffers at the receiver and sender, maintaining a **window** of a specific size.
@@ -461,8 +461,7 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
             - Sender retransmits unacknowledged packets after a **timeout** or upon receiving a **NAK**.
             - The receiver **acknowledges** all correct packets and stores them until they can be delivered in order.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2014.png)
-            
+            ![Untitled 14](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/8ce29590-c7de-4c13-9c0d-f65336b4dc3c)
 
 ### 4. Flow Control
 
@@ -578,7 +577,7 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
 
 ### **Ethernet (IEEE 802.3) Frame Format**
 
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2015.png)
+![Untitled 15](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/67810fb4-44ae-47a1-8377-ba5e85143301)
 
 - **Preamble**: A 7-byte of alternative 0’s and 1’s pattern used for **bit synchronization** at the frame's start.
 - **Start of Frame Delimiter (SFD)**: A 1-byte field (10101011) indicating the frame's beginning and **synchronization**.
@@ -593,19 +592,16 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
 - **Multicast** and **Broadcast Frames**: Ethernet supports sending frames to specific groups or **all devices** on the network.
 - **Collision Detection**: In **half-duplex Ethernet** networks, the CSMA/CD protocol is used to detect and manage **collisions** during data transmission.
 
-<aside>
-💡 ***Size of frame** of Ethernet IEEE 802.3 varies **64 bytes** to **1518 bytes** including data length (46 to 1500 bytes).*
-
-</aside>
+>💡 **Size of frame** of Ethernet IEEE 802.3 varies **64 bytes** to **1518 bytes** including data length (46 to 1500 bytes).*
 
 ### VLAN
 
 - **VLANs** divide devices logically on **layer 2**, allowing switches to separate **broadcast domains** and enabling **inter-VLAN routing** for forwarding packets between VLANs and different broadcast domains, resulting in smaller, manageable **sub-networks**.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2016.png)
-    
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2017.png)
-    
+    ![Untitled 16](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/fcd149c6-c18f-4be8-afbd-e3fd1e9db7c3)
+
+    ![Untitled 17](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/627294a6-9646-44c4-a140-f371b9cbf48c)
+
 - **VLANs** offer improved network security, better performance, simplified management, flexibility, cost savings, and scalability by logically **separating network traffic**, reducing **broadcast traffic**, simplifying **network management**, enabling **dynamic configuration**, reducing **hardware costs**, and facilitating **network segmentation**.
 - Some of the key features of VLANs include **VLAN tagging** for distinguishing VLAN traffic, **VLAN membership** for assigning devices to VLANs, **VLAN trunking** for transmitting multiple VLANs over a single link, and **VLAN management** for configuration and administration of VLANs.
 - **Types of connections in VLAN:**
