@@ -178,26 +178,24 @@ A transmission medium is a physical path between the **transmitter** and the **r
     1. **Twisted Pair Cable:** It is the **most widely used** transmission media.
         1. **UTP** (Unshielded Twisted Pair) is an **inexpensive** and **easy-to-install** cable consisting of two insulated copper wires twisted together, providing high-speed capacity but **susceptible to external interference**, with applications in telephony and LAN networks.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%209.jpeg)
-            
+            ![Untitled 9](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/04798cae-08a8-4316-9b68-701c9c201d8c)
+
         2. **Shielded Twisted Pair (STP)** is a cable with a special jacket (copper braid or foil shield) that blocks external interference, providing **better performance at higher data rates** and **eliminating crosstalk**, but it is more difficult to install and manufacture, expensive, and bulky. It is commonly used in cold climates and for applications requiring additional shielding.
             
-            ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2010.jpeg)
-            
-    2. **Coaxial Cable:** It has parallel conductors and an outer plastic covering, provides **high bandwidth** and **noise immunity**, used in applications such as **cable TV**, **computer networks (like Ethernet)**, and **radio frequency signal transmission**, with advantages of **easy installation** and **expansion** but susceptible to network disruption if a single cable fails.
+            ![Untitled 10](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/6b29a1a9-be8c-49bd-bcc8-610e030f9618)
+
+    2. **Coaxial Cable:** It has parallel conductors and an outer plastic covering, provides **high bandwidth** and **noise immunity**, used in applications such as **cable TV**, **computer networks (like Ethernet)**, and **radio frequency signal transmission**, with advantages of **easy installation** and **expansion** but susceptible to network disruption if a single cable fails.        
         
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2011.jpeg)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2012.jpeg)
-        
+        ![Untitled 11](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/d18f7696-df33-43e7-8bb9-a4b02bdf3812)
+
+        ![Untitled 12](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/1a734897-0da5-4ea6-9cf7-d72912ef3399)
+
     3. **Optical Fiber Cable:** A cable with a core and cladding made of glass or plastic, offers **increased capacity** and **bandwidth**, lightweight design, low signal attenuation, immunity to electromagnetic interference, and resistance to corrosive materials, but has **difficult installation** and maintenance, high cost, and fragility. It finds applications in **medical instruments**, **aerospace data transmission**, **internet cables**, and **industrial lighting and automobile design**.
         
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2013.jpeg)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2014.jpeg)
-        
+        ![Untitled 13](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/4792cbf5-f5a0-486a-b69d-eff14d8116d3)
+
+        ![Untitled 14](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/d10c8de1-038a-4610-9bf8-f4167cc48f11)
+
 2. **Unguided Media: Wireless or Unbounded transmission media** refers to transmitting **electromagnetic signals** through **air**, covering larger distances, but with **less security** compared to wired transmission
     1. **Radio waves**, easily generated and capable of penetrating buildings, are used for transmission in AM and FM radios, cordless phones, and categorized as **terrestrial** and **satellite,** with a frequency range of 3KHz - 1GHz. E.g. - WiFi and Bluetooth.
     2. **Microwaves,** are used for **line-of-sight transmission**, where proper alignment of **sending** and **receiving antennas** is required, with signal distance proportional to **antenna height**, operating in the frequency range of **1GHz to 300GHz**, primarily utilized for **mobile phone communication** and **television distribution**.
@@ -215,23 +213,23 @@ Also know as **Communication Modes**.
     
     Communication is **unidirectional**, allowing only one device to transmit while the other can only receive; it is **cost-effective**, **reliable**, and does not require coordination between devices, but lacks bidirectional communication and data verification.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%202.png)
-    
+    ![Untitled 2](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/c16744b1-4e5c-4b81-80e4-e08b034ac765)
+
 2. **Half-Duplex Mode**
     
     Devices can **transmit and receive** but not simultaneously; it allows for **bidirectional communication** and is **more efficient** than simplex mode, but it's **less reliable**, has a **delay**, and requires **coordination** between devices.
     
     $Channel capacity=Bandwidth * Propagation Delay$
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%203.png)
-    
+    ![Untitled 3](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f6579ffe-bd41-4b39-91bf-896b8de9d7da)
+
 3. **Full-Duplex Mode**
 In **full-duplex mode**, both stations can **simultaneously transmit and receive**, making it ideal for **real-time applications**; it is the **most efficient** and provides **high reliability**, but is **expensive**, **complex**, and may not be necessary for all communication types.
     
     $Channel Capacity=2* Bandwidth*Propagation Delay$
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%204.png)
-    
+    ![Untitled 4](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/27a8ca74-9d49-4a9e-aebf-8c0024ceed2d)
+
 
 ### Functions of Physical Layer
 
