@@ -1281,23 +1281,24 @@ TCP supports two types of connection releases:
 - *Advantages of UDP*: **Faster transmission speed**, **lower latency**, **simpler protocol design**, **broadcast support**, and **smaller packet size** improve network performance.
 - *Disadvantages of UDP*: **No reliability**, **no congestion control**, **no flow control**, **vulnerable to attacks**, and **limited use cases** restrict its suitability for certain applications.
 - **TCP vs UDP**
-| Basis | Transmission Control Protocol (TCP) | User Datagram Protocol (UDP) |
-|-------|------------------------------------|-----------------------------|
-| Type of Service | Connection-oriented | Datagram-oriented |
-| Reliability | Reliable | Not reliable |
-| Error checking mechanism | Extensive error-checking mechanisms | Basic error-checking mechanism using checksums |
-| Acknowledgment | An acknowledgment segment is present | No acknowledgment segment |
-| Sequence | Sequencing of data | No sequencing of data |
-| Speed | Comparatively slower | Faster, simpler, and more efficient |
-| Retransmission | Retransmission of lost packets is possible | No retransmission of lost packets |
-| Header Length | Variable length header (20-60 bytes) | Fixed-length header (8 bytes) |
-| Weight | Heavy-weight | Lightweight |
-| Handshaking Techniques | Uses handshakes such as SYN, ACK, SYN-ACK | No handshaking |
-| Broadcasting | Doesn't support Broadcasting | Supports Broadcasting |
-| Protocols | Used by HTTP, HTTPs, FTP, SMTP and Telnet | Used by DNS, DHCP, TFTP, SNMP, RIP, and VoIP |
-| Stream Type | Byte stream | Message stream |
-| Overhead | Low but higher than UDP | Very low |
-| Applications | Used in situations requiring safe and trustworthy communication (e.g., email, web surfing, military services) | Used in situations requiring quick communication but not concerned with reliability (e.g., VoIP, game streaming, video, and music streaming) |
+  
+    | Basis | Transmission Control Protocol (TCP) | User Datagram Protocol (UDP) |
+    |-------|------------------------------------|-----------------------------|
+    | Type of Service | Connection-oriented | Datagram-oriented |
+    | Reliability | Reliable | Not reliable |
+    | Error checking mechanism | Extensive error-checking mechanisms | Basic error-checking mechanism using checksums |
+    | Acknowledgment | An acknowledgment segment is present | No acknowledgment segment |
+    | Sequence | Sequencing of data | No sequencing of data |
+    | Speed | Comparatively slower | Faster, simpler, and more efficient |
+    | Retransmission | Retransmission of lost packets is possible | No retransmission of lost packets |
+    | Header Length | Variable length header (20-60 bytes) | Fixed-length header (8 bytes) |
+    | Weight | Heavy-weight | Lightweight |
+    | Handshaking Techniques | Uses handshakes such as SYN, ACK, SYN-ACK | No handshaking |
+    | Broadcasting | Doesn't support Broadcasting | Supports Broadcasting |
+    | Protocols | Used by HTTP, HTTPs, FTP, SMTP and Telnet | Used by DNS, DHCP, TFTP, SNMP, RIP, and VoIP |
+    | Stream Type | Byte stream | Message stream |
+    | Overhead | Low but higher than UDP | Very low |
+    | Applications | Used in situations requiring safe and trustworthy communication (e.g., email, web surfing, military services) | Used in situations requiring quick communication but not concerned with reliability (e.g., VoIP, game streaming, video, and music streaming) |
 
 ## 5. Application Layer
 
@@ -1379,7 +1380,7 @@ TCP supports two types of connection releases:
         telnet 192.168.0.100
         ```
         
-    2. **SSH (**Secure Shell)
+    2. **SSH (Secure Shell)**
         - It is a network protocol for secure remote access to devices.
         - Uses **Port number 22** by default.
         - Uses **TCP** for establishing connections.
@@ -1395,7 +1396,7 @@ TCP supports two types of connection releases:
         ssh john@192.168.0.100
         ```
         
-    3. **FTP (**File Transfer Protocol**) / How file tranfer works?**
+    3. **FTP (File Transfer Protocol) / How file tranfer works?**
         - **FTP** is an application layer protocol that transfers files between local and remote file systems.
         - It uses two parallel TCP connections: the **control connection** (port 21) for sending control information, and the **data connection** (port 20) for sending the actual file.
         - FTP is preferred over other protocols like HTTP for file transfer due to its **clarity**, **focus**, and ability to handle **heterogeneity** in systems.
@@ -1409,15 +1410,15 @@ TCP supports two types of connection releases:
     4. **TFTP (**Trivial File Transfer Protocol**)**
         - It is a **stripped-down** and **simplified version** of FTP. It is used for transferring files between network devices when you have a clear understanding of what you need and its location.
         - TFTP serves as a **technology** for file transfer and operates on **port number 69**.
-    5. **NFS (**Network File System)
+    5. **NFS (Network File System)**
         - It enables remote hosts to **mount file systems** over a network and interact with them as if they were locally mounted.
         - NFS facilitates the consolidation of resources onto centralized servers in a network, providing system administrators with greater control and efficiency.
         - The **port number** associated with NFS is **2049**.
-    6. SNMP (Simple Network Management Protocol)
+    6. **SNMP (Simple Network Management Protocol)**
         - It collects data by polling network devices from a management station, disclosing specific information.
         - It allows servers to **share information** about their current state and enables administrators to **modify predefined values**.
         - The **port numbers** for SNMP are **161 (TCP)** and **162 (UDP)**.
-    7. **HTTP/HTTPS (**Hypertext Transfer Protocol / Hypertext Transfer Protocol Secure)
+    7. **HTTP/HTTPS (Hypertext Transfer Protocol / Hypertext Transfer Protocol Secure)**
         - **HTTP** is used to access data from the World Wide Web.
         - **Hypertext** is a well-organized documentation system used to link pages in a text document.
         - **HTTP** is based on the client-server model.
@@ -1436,16 +1437,16 @@ TCP supports two types of connection releases:
         
         ![Untitled 61](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/7db4128a-b806-4e16-9565-093e67d788a0)
 
-    8. **SMTP (**Simple Mail Transfer Protocol)
+    8. **SMTP (Simple Mail Transfer Protocol)**
         - It is a part of the **TCP/IP protocol**. It uses a **"store and forward"** process to move email across networks.
         - SMTP works in conjunction with the **Mail Transfer Agent (MTA)** to ensure that your emails are sent to the correct computer and delivered to the intended email inbox.
         - The **port number** associated with SMTP is **25**.
-    9. **POP (**Post Office Protocol)
+    9. **POP (Post Office Protocol)**
         - It is used for **message retrieval** from mail servers.
         - Latest version: **POP3** (Post Office Protocol version 3).
         - Uses **Port number 110** and **TCP** for establishing connections.
         - Works in **dual mode**: Delete mode (messages are deleted from the mail server after downloading to the local system) and Keep mode (messages are not deleted from the mail server, allowing users to access them later).
-    10. **IMAP** (Internet Message Access Protocol)
+    10. **IMAP (Internet Message Access Protocol)**
         - It is used for message retrieval and synchronization from mail servers.
         - Latest version: **IMAP4** (Internet Message Access Protocol version 4).
         - Uses **Port number 143** and **TCP** for establishing connections.
@@ -1453,7 +1454,7 @@ TCP supports two types of connection releases:
         - Supports **server-side folder management**, enabling users to create, delete, and organize folders on the mail server.
         - Provides **multi-device synchronization**, ensuring that changes made on one device are reflected on all other devices.
         - Allows for **offline access**, where users can access previously synchronized messages without an active internet connection.
-    11. **MIME** (Multipurpose Internet Mail Extension)
+    11. **MIME (Multipurpose Internet Mail Extension)**
         - It extends the capabilities of **SMTP** by allowing **non-ASCII data** transmission. Users can send/receive various files like **audio, video, programs**, etc. MIME collaborates with other protocols to enhance their capabilities.
     12. DNS
     13. DHCP
