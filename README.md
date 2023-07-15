@@ -17,8 +17,8 @@
     - ******Disadvantages:****** Have **limited scalability**, require **separate links for new devices**, leading to **time-consuming and expensive** processes, **difficult maintenance** due to managing each device separately, and a **lack of redundancy**, posing problems if a link fails or a device goes offline.
 2. **Bus Topology**
     
-    ![ekpst20i.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/ekpst20i.bmp)
-    
+    ![ekpst20i](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/ab12f9f1-6763-423f-917c-420ac79c7ffc)
+
     - ************************Advantages:************************ The **bus topology** is the easiest network topology for 
     connecting peripherals or computers in a linear fashion through a central **RJ-45** cable, and it works  very efficiently well when there is a small network. The length of cable required is less than a star topology, and it is easy to connect or remove devices in this network without affecting any other device. It is **very cost-effective** as compared to other network 
     topologies, such as mesh and star. Additionally, it is easy to 
@@ -27,22 +27,22 @@
     - Various **MAC (Media Access Control)** protocols are followed by LAN ethernet connections like **TDMA, Pure Aloha, CDMA, Slotted Aloha**, etc.
 3. **Ring Topology**
     
-    ![hkn7dg67.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/hkn7dg67.bmp)
-    
+    ![hkn7dg67](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/5119c696-042c-48fd-9da2-ce96f0c2e750)
+
     - **Advantages: Data flows** in one direction, reducing the chance of **packet collisions**. Additional workstations can be added without impacting network **performance**. It provides **equal access** to resources without the need for a controlling **server**. This topology is **cost-effective** for installation and expansion with **minimal collisions**. It offers high-speed **data transfer** and improved performance compared to a bus topology under heavy traffic due to **token passing**. It is **easy to manage** and ensures orderly organization with every device having access to the **ring network token** for transmission.
     - ****************Disadvantages:**************** Due to the **Uni-directional Ring**, a data packet (token) must have to pass through all the nodes. If one workstation shuts down, it affects **whole network** or if a node goes down **entire network goes down**. It is **slower in performance** as compared to the bus topology. It is **Expensive**. **Addition and removal** of any node during a network is **difficult** and may cause **issue** in network activity. **Difficult to troubleshoot** the ring. In order for all the computer to communicate with each other, all computer must be **turned on**. **Total dependence** in on one cable. They were not **Scalable**.
 4. **Star Topology**
     
-    ![orskwe1b.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/orskwe1b.bmp)
-    
+    ![orskwe1b](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/6d91de0c-da38-4f20-a04c-d82862b54d6f)
+
     - ************************Advantages:************************ It is very **reliable** – if one cable or device fails then all the others will still work. It is **high-performing** as no data collisions can occur. **Less expensive** because each device only needs one I/O port and wishes to be connected with a hub with one link. **Easier to put in**. **Robust** in nature. **Easy fault detection** because the links are often easily identified. No disruptions to the network when connecting or removing devices. Each device requires just one port i.e. to attach to the hub. If N devices are connected to every other in a star, then the amount of cables required to attach them is N. So, it’s easy to line up.
     - ******Disadvantages:****** Requires more cable than a linear bus. If the connecting network device (**network switch**) fails, nodes attached are disabled and can’t participate in network communication. More expensive than linear bus topology due to the value of the connecting devices (**network switches**). If **hub** goes down everything goes down, none of the devices can work without **hub**. **Hub** requires more resources and regular maintenance because it’s the central system of **star**. Extra hardware is required (**hubs** or **switches**) which adds to cost. Performance is predicated on the one concentrator i.e. **hub**.
     - Many popular Ethernet LAN protocols are used as **CD(Collision Detection), CSMA (Carrier Sense Multiple Access)**, etc.
     - Forms a Local Area Network (LAN)
 5. **Mesh Topology**
     
-    ![k0d9axhe.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/k0d9axhe.bmp)
-    
+    ![k0d9axhe](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/295bb949-aa0d-4f0c-8678-261a5e54e0d0)
+
     - **************Types:**************
         1. In a **full mesh**, all nodes are interconnected, creating **n-1** connections for each of the **n** nodes in the network. It offers **high redundancy** but is **expensive** and commonly used for **network backbones**. The **total number of links required** is **[n(n-1)]/2**.
         2. A **partial mesh** is a **more practical** and **cost-effective** option where not all nodes need to be directly connected. It allows for peripheral networks to be linked using a partial mesh while utilizing a full-mesh backbone for **added connectivity** and **redundancy**.
@@ -51,13 +51,13 @@
     - The protocols used are **AHCP (Ad Hoc Configuration Protocols), DHCP**
 6. ****Tree Topology****
     - It is the combination of bus and star topology.
-    
-    ![k70wid74.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/k70wid74.bmp)
+      
+    ![k70wid74](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/30fcf763-3077-4a50-acfb-76788a7adc5c)
     
 7. **Hybrid Topology**
     
-    ![1drq63g1.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/1drq63g1.bmp)
-    
+    ![1drq63g1](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/d2d72727-2675-4d19-ad01-bbdcbe69afb8)
+
 
 ---
 
@@ -93,27 +93,28 @@
     - Operates on the **physical layer**.
     - A **repeater** is a **2-port device** that **amplifies** and **regenerates** weak or corrupted signals at the **physical layer**. Its job is to extend the **transmission length** of the signal over the **same network** before it becomes too weak or corrupted, copying and regenerating it **bit by bit** at its **star topology connectors** to maintain the original strength.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled.jpeg)
-    
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%201.jpeg)
-    
+    ![Untitled](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/708b3e8c-e11a-4502-a0a9-0a656c9c1aed)
+
+    ![Untitled 1](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/25d6e01c-6d33-4253-b51e-1c073382b7f1)
+
 2. **Hub**
     - Operates on the **physical layer**.
     - A **hub** functions as a **multi-port repeater** in a **star topology**, connecting multiple wires from different branches and sending data packets to all connected devices without filtering. This results in a shared **collision domain(***In a **collision domain**, network devices **compete for access** to the network, potentially causing **collisions** when **multiple devices transmit data simultaneously**, requiring all devices in the collision domain to **pay attention** to messages sent, regardless of their destination, resulting in **waiting** and **re-transmission** in a **half-duplex mode*)**, inefficiencies, and wastage as hubs lack intelligence for optimal data packet routing.
     - The different types of hubs include **Active Hub**, which acts as a repeater and wiring center, **Passive Hub**, which relays signals without cleaning or boosting them, and **Intelligent Hub**, which offers remote management capabilities, flexible data rates, traffic monitoring, and port configuration.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%202.jpeg)
-    
+    ![Untitled 2](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/15e75f49-ef7b-4c16-a0ea-85a09d0f3559)
+
 3. **Bridge**
     - It operates at the **data link layer.**
     - It functions as a **repeater** with the added ability to **filter content** based on **MAC addresses**, connecting **two LANs** working on the **same protocol** as a **2-port device**.
     - The **types of bridges** include **Transparent Bridges**, where stations are unaware of the bridge's presence, and **Source Routing Bridges**, where routing is performed by the source station and frames specify the route to follow. Transparent bridges utilize **bridge forwarding** and **bridge learning** processes, while Source Routing Bridges use **discovery frames** to spread through the network for route identification.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%203.jpeg)
+    ![Untitled 3](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/de0608ef-6835-4df4-90ee-ec7d5e7b1289)
+
+   ![Untitled](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/0985840d-64c4-48a2-baf1-d4347e50a763)
+
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled.png)
-    
-4. **Switch**
+5. **Switch**
     - It operates at the **data link layer.**
     - A **switch** is a **multiport bridge** with a buffer that enhances **efficiency** and **performance**, as it can perform **error checking** and selectively forward **good packets** to the correct port, effectively dividing the **collision domain** while maintaining the same **broadcast domain(**a **logical area** in a network where **broadcast packets** are delivered to all connected devices, which can create **congestion** and affect the **bandwidth** of the users in that network, commonly known as **LAN congestion)**.
     - Types of Switch:
@@ -132,9 +133,9 @@
         | Desktop switches | Designed for desktop or small office environments, smaller in size compared to rack-mounted switches. |
         | Modular switches | Have a modular design allowing for easy expansion or customization, suitable for large networks and data centers. |
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%204.jpeg)
-    
-5. **Routers**
+    ![Untitled 4](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/35d87cf6-bf71-4b70-aef1-eda3eb96e381)
+
+6. **Routers**
     - A **router** is a **Network Layer device** that routes data packets based on their **IP addresses**, connecting LANs and WANs, and making routing decisions using a **dynamically updating routing table** to divide broadcast domains.
     
     | Device | Seperates Collision Domain | Seperates Broadcast Domain |
@@ -143,26 +144,27 @@
     | Switch / Bridge | YES | NO |
     | Router | YES | YES |
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%201.png)
-    
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%205.jpeg)
-    
-6. **Gateway**
+    ![Untitled 1](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a079c6aa-aede-469b-acf2-4045da5ad2ab)
+
+    ![Untitled 5](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/20eac9e0-2a2c-4b8d-a35e-e1a5e5701abd)
+
+7. **Gateway**
     - It operates at the **network layer (Layer 3)** or the **application layer (Layer 7)**.
     - At the network layer (Layer 3), it is a passage connecting two networks with **different networking models**, functioning as a **messenger agent** that interprets and transfers data between systems, also known as a **protocol converter.** Typically more complex than switches or routers.
     - At the application layer (Layer 7), it acts as an entry or exit point, facilitating **communication** and **protocol conversion** between applications or services using different protocols or data formats, commonly known as **application gateways** or **proxy servers**.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%206.jpeg)
+    ![Untitled 6](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/30820b67-13de-4f4f-83c6-47c6b02ff208)
+
+   ![Untitled 7](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/622cffbf-26cd-4d4f-afe3-924234e67fed)
+
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%207.jpeg)
-    
-7. **Brouter**
+9. **Brouter**
     - A **bridging router** combines bridge and router features, capable of **routing packets** across networks and **filtering local area network traffic** at either the **data link layer** or **network layer**.
-8. **NIC**
+10. **NIC**
     - The **NIC** (network interface card) is a **layer 2 (data link)** network adapter that connects a computer to a network using a unique ID(**MAC address**) and cable interface(Ethernet or **RJ-45** port), enabling LAN establishment and communication with the router or modem at the **physical and data link layers** of the network model.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%208.jpeg)
-    
+    ![Untitled 8](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a4bb75a4-14a6-4ccf-8e70-be086c40b789)
+
 
 ---
 
