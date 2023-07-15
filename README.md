@@ -11,8 +11,8 @@
 
 1. **Point to Point Topology**
     
-    ![9ldbtosd.bmp](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/9ldbtosd.bmp)
-    
+    ![9ldbtosd](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/73ef1cb4-6fcc-4db1-95a2-2dd1b6841065)
+
     - ******Advantages:****** Have **high efficiency** with direct communication between devices, **enhanced security** by eliminating reliance on compromised intermediate devices, and **simple configuration** with minimal management or administration requirements.
     - ******Disadvantages:****** Have **limited scalability**, require **separate links for new devices**, leading to **time-consuming and expensive** processes, **difficult maintenance** due to managing each device separately, and a **lack of redundancy**, posing problems if a link fails or a device goes offline.
 2. **Bus Topology**
