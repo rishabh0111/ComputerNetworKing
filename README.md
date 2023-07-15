@@ -662,8 +662,7 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
     | D | 1110 | - | - | - | - | - | 224.0.0.0 | 239.255.255.255 | Reserved for multicast communication | Class D addresses do not have network or host portions in the same sense as Class A, B, and C. Instead, they are used for multicast group identification. |
     | E | 1111 | - | - | - | - | - | 240.0.0.0 | 255.255.255.255 | Reserved for experimental / research use | Not intended for public use and are reserved for future. |
     
-    ![Untitled design.png](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled_design.png)
-    
+    ![Untitled_design](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f71af35f-653e-41bb-8196-084905d0079d)
 
 ---
 
@@ -699,18 +698,18 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
     - Prefix length of **27** indicates **32** addresses in the network block.
     - First address: **167.199.170.64** (calculated using given address and network mask)
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2018.png)
-    
+    ![Untitled 18](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/2d5ae95b-8d28-4152-8b8c-518f37970af2)
+
     - Last address: **167.199.170.95** (calculated using given address and complement of network mask)
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2019.png)
-    
+    ![Untitled 19](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/fbe37c07-ed26-4ccb-9877-f45102f552bd)
+
     - The network block has a range from **167.199.170.64** to **167.199.170.95**.
     - Total hosts in the network: **32**. CIDR block satisfies rules: power of 2 addresses, first address divisible by block size. The block also contains **32** contiguous unallocated addresses.
 
 ### IPv4 Header
 
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2020.png)
+![Untitled 20](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/8dc40f0b-5594-46ea-8352-62eb7b6b7bd5)
 
 ***VERSION:** Version of the IP protocol (4 bits), which is 4 for IPv4*
 
@@ -742,24 +741,24 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
 
 1. **Unicast** is a network communication method where data is transmitted from a **single sender** to a **single recipient**, allowing **one-to-one transmission** between devices with unique **IP addresses**.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2021.png)
-    
+    ![Untitled 21](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/88633eb0-e28a-4b76-90ca-5e3193622153)
+
 2. Broadcasting transfer (one-to-all) techniques can be classified into two types:
     1. **Limited Broadcasting** is a network communication method that sends data packets to **all devices** in a network using the destination address **255.255.255.255**, allowing information transfer from a **single sender** to **all recipients**.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2022.png)
-        
+        ![Untitled 22](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f5387d3d-1908-42b3-8183-723af01da3bd)
+
     2. **Direct Broadcasting** is a network communication method where a device in one network sends a packet stream to **all devices** over another network by setting the **Host ID part bits** of the destination address to 1 in the datagram header.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2023.png)
-        
+        ![Untitled 23](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/2cfc1b0f-7946-4159-8088-06899a0933d3)
+
 3. **Multicasting** combines **unicast** and **broadcast**, enabling **one/more senders** and **recipients** to participate in data transfer. It allows servers to send **single data stream** copies to multiple hosts using protocols like **IGMP(Internet Group Management Protocol)**, **multicast routing**, and **Class D** in IP addressing.
 
 ### **IPv6**
 
 - **IPv6**, a solution to **IPv4 exhaustion**, was developed by **IETF**, featuring a **128-bit** address space of **2^128** and using a **hexadecimal** format with **8 groups**, each representing **16 bits**, separated by **colons**.
 
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2024.png)
+![Untitled 24](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/5b155401-f654-4d31-a64a-45954b9d6dd9)
 
 - **IPv6** offers more efficient header format with separate **options**, new **functionalities**, **extensibility**, support for **resource allocation** and **real-time traffic**, and enhanced **security** through encryption and authentication options.
 - **Addressing methods:**
@@ -769,8 +768,8 @@ The **Data Link Layer** provides an interface to the **Network Layer** in the OS
     Note: IPv6 does not define the concept of **broadcast** addresses.
 - **IPv6 Header:**
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2025.png)
-    
+    ![Untitled 25](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/60784de2-d21b-4dca-b647-0c7f4d5165df)
+
     - **Version (4-bits)**: Indicates the version of the Internet Protocol, currently represented by the bit sequence 0110.
     - **Traffic Class (8-bits)**: Indicates the class or priority of the IPv6 packet, allowing routers to handle traffic based on priority. Congestion controlled traffic is assigned values 0 to 7, while uncontrolled traffic, typically used for Audio/Video data, is assigned values 8 to 15. Priorities can be set by the source node but can be changed by routers along the way.
     - **Flow Label (20-bits)**: Used by the source to label packets belonging to the same flow, requesting special handling from intermediate routers. It helps distinguish different flows, as multiple flows may exist between a source and destination.
@@ -792,11 +791,11 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - Static routing offers *advantages* like reduced router **CPU overhead**, added **security** by limiting routing to specific networks, and no **bandwidth usage** between routers.
     - Disadvantages of static routing include the **manual effort** required for administrators to add routes to the routing table on each router in a large network and the need for administrators to possess **extensive knowledge** of the network's **topology**.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2026.png)
+       ![Untitled 26](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/5a71e168-617f-490f-9a5b-d9fbe8c406bc)
     
-2. **Default Routing**
+3. **Default Routing**
     - It is a method where all packets are forwarded to a single configured router (next hop), regardless of the destination network, commonly used with **stub routers** that have only one route to reach all other networks.
-3. **Dynamic Routing**
+4. **Dynamic Routing**
     - It automatically adjusts routes based on the current state of the routing table using protocols like **RIP** and **OSPF**, allowing routers to exchange route information and adapt to changes in the network **topology**.
     - It offers advantages like easy configuration, effective route selection, and remote network discovery, but it **consumes more bandwidth** for neighbor communication and is **less secure** than static routing.
 
@@ -817,20 +816,21 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
         
         Consider 3-routers X, Y and Z
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2027.png)
+      ![Untitled 27](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/a803d5c2-d247-4072-a8ba-a90224aacf3e)
+
         
         As we can see that distance will be **less** going from X to Z when Y is intermediate node(hop) so it will be update in routing table X.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2028.png)
-        
+        ![Untitled 28](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/f1269c38-2345-4b49-aa77-894c9a3a4b69)
+
         Similarly for Z also –
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2029.png)
-        
+        ![Untitled 29](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/021c9904-6e9b-4f17-8bc1-8d341302d8cf)
+
         Finally the routing table for all –
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2030.png)
-        
+        ![Untitled 30](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/7a56f670-06dc-4959-acbd-f03d407727f2)
+
     - **Routing Information Protocol (RIP)**
         - It uses **hop count** as a routing metric to find the best path between the source and the destination network. RIP uses port number **520**.
         - Hop count in routing refers to the number of routers between the source and destination network, and **RIP** limits the number of hops to prevent **routing loops**, with a maximum hop count of **15** and a hop count of **16** indicating **network unreachable**.
@@ -853,18 +853,18 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - **Example:**
         
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2031.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2032.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2033.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2034.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2035.png)
-        
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2036.png)
-        
+        ![Untitled 31](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/bf757baf-c1b8-4a73-8853-435296d0fc13)
+
+        ![Untitled 34](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/c0598860-8172-453f-90d5-f1ea66980724)
+
+        ![Untitled 32](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/da7f7b49-2a4d-4a03-9134-7556f2d3b3a6)
+
+        ![Untitled 35](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/03bd4ddc-6eed-4c40-ba28-07fe576f3006)
+
+        ![Untitled 33](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/1d90bbfe-d2f1-44cf-ae83-adea373ad896)
+
+        ![Untitled 36](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/85a257db-6851-4f9b-8846-700799daf2a3)
+
     - **Open Shortest Path First (OSPF)**
         - It **protocol** where routers exchange topology information with their nearest neighbors and calculate end-to-end paths using a **variant** of the Dijkstra algorithm.
         - The main **advantage** of OSPF is its ability to calculate routes based on specific criteria, making it useful for **traffic engineering** and quality of service requirements.
@@ -897,7 +897,7 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
         3. Verifying network **connectivity**: BGP checks the functionality of peers and the network connection between them to ensure proper operation.
     - BGP performs **route information management functions** including **route storage**, **route update**, **route selection**, and **route advertisement** to maintain accurate routing information within the network.
 
-![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2037.png)
+![Untitled 37](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e51cb9db-ad9f-4795-87fa-9816da21e089)
 
 ### **Network Address Translation (NAT)**
 
@@ -929,7 +929,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
 
 - Tunneling is a technique that enables the connection of source and destination networks of different types through an intermediate network. It involves **encapsulating data** at various protocol layers to facilitate communication between networks with different interfaces, following a layered protocol model such as OSI or TCP/IP.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2038.png)
+  ![Untitled 38](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/2e7d3958-6009-45b4-b629-6c9f319d12d7)
+
     
 - Tunneling abstracts the WAN as a "big tunnel" between multiprotocol routers M1 and M2, allowing hosts A and B to communicate without directly dealing with the WAN. It involves **encapsulating** IP packets within WAN packets, enabling communication between **different networks**.
 - **Types of Tunneling Protocols:**
@@ -944,8 +945,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
 - **What is SSL Tunneling?**
     - It involves a client that requires an SSL connection to a backend service or secures a server via a proxy server. This proxy server opens the connection between the client and the backend service and copies the data to both sides without any direct interference in the SSL connection.
     
-    ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2039.png)
-    
+    ![Untitled 39](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e4a818d0-4719-43e5-b9d4-e71776d41392)
+
 
 ### ARP & RARP
 
@@ -954,14 +955,14 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
         - **Address Resolution Protocol(**ARP) is a **protocol** used within the **same network** to discover the **MAC address** associated with an **IP address.** It operates from the **network layer** to the **data link layer**.
         - It enables the mapping process between **IP addresses** and **MAC addresses**, ensuring that the MAC address of the destination machine is known before sending an IP packet, by broadcasting an **ARP-discovery packet** and receiving a unicast **ARP-reply packet** from the intended receiver, resulting in the updating of the **ARP-cache** and subsequent sending of unicast messages to the destination.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2040.png)
-        
+        ![Untitled 40](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/524c3e68-763c-429e-8c36-fa97b8b2e217)
+
     2. **Reverse Address Resolution Protocol (RARP):**
         - Reverse ARP (RARP) is a protocol used in local area networks to request an **IP address** from the gateway-router's **ARP table**. The **RARP server**, configured as a special host in the LAN, responds to broadcast packets containing the requester's **MAC address**, searching for a matching entry in the **IP-to-MAC address mapping table**.
         - RARP is supported by LAN technologies such as **Ethernet, Ethernet II, Token Ring, and Fiber Distributed Data Interface (FDDI)**. However, RARP is not widely used in modern networks due to the availability of more advanced protocols like **BOOTP (Bootstrap Protocol)** and **DHCP** that offer enhanced functionality.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2041.png)
-        
+        ![Untitled 41](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/e18e21b8-0728-429a-9e27-21c1a27c3ac7)
+
     3. **Inverse Address Resolution Protocol (InARP)** finds an **IP address** from a **MAC address** in networks like **ATM** and **Frame Relay**. It maps local identifiers (**DLCIs**) to remote **IP addresses** when the IP address is unknown but the identifier is available, enabling efficient communication.
     4. **Proxy ARP** enables devices in different network segments connected by a router in the same IP network to communicate by resolving **IP addresses** to **MAC addresses**. It allows the "proxy router" to respond with its **MAC address**, facilitating data transmission between devices that would otherwise be unable to resolve addresses due to broadcast limitations.
     5. **Gratuitous Address Resolution Protocol (Gratuitous ARP)** is used during computer boot-up to **broadcast** the **MAC address**, enabling DHCP servers to allocate an **IP address**. It helps **detect IP conflicts** and updates **ARP** and **switch port MAC address tables**.
@@ -971,8 +972,8 @@ Routing is a process that is performed by layer 3 (or network layer) devices in 
     - ARP poisoning, also known as ARP spoofing, enables the attacker to **intercept**, **modify**, or **halt** data in-transit.
     - ARP poisoning can serve as a gateway for more severe attacks such as **Man-in-the-Middle**, **denial of service**, or **session hijacking** attacks.
         
-        ![Untitled](#%20Computer%20Networks%206673ce922d3b4685abdb77ad0a1fef94/Untitled%2042.png)
-        
+        ![Untitled 42](https://github.com/rishabh0111/ComputerNetworKing/assets/115526596/3af4cb46-8af3-4dfa-b2c6-0494ffbd64f4)
+
 - **Difference between ARP and RARP**
     
     
