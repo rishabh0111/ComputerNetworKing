@@ -1281,29 +1281,23 @@ TCP supports two types of connection releases:
 - *Advantages of UDP*: **Faster transmission speed**, **lower latency**, **simpler protocol design**, **broadcast support**, and **smaller packet size** improve network performance.
 - *Disadvantages of UDP*: **No reliability**, **no congestion control**, **no flow control**, **vulnerable to attacks**, and **limited use cases** restrict its suitability for certain applications.
 - **TCP vs UDP**
-    
-    
-    | Basis | Transmission Control Protocol (TCP) | User Datagram Protocol (UDP) |
-    | --- | --- | --- |
-    | Type of Service | https://www.geeksforgeeks.org/what-is-transmission-control-protocol-tcp/ is a connection-oriented protocol. Connection 
-    orientation means that the communicating devices should establish a connection before transmitting data and should close the connection after transmitting the data. | https://www.geeksforgeeks.org/user-datagram-protocol-udp/is the Datagram-oriented protocol. This is because 
-    there is no overhead for opening a connection, maintaining a connection, or terminating a connection. UDP is efficient for broadcast and multicast types of network transmission. |
-    | Reliability | TCP is reliable as it guarantees the delivery of data to the destination router. | The delivery of data to the destination cannot be guaranteed in UDP. |
-    | Error checking mechanism | TCP provides extensive error-checking mechanisms. 
-    It is because it provides flow control and acknowledgment of data. | UDP has only the basic error-checking mechanism using checksums. |
-    | Acknowledgment | An acknowledgment segment is present. | No acknowledgment segment. |
-    | Sequence | Sequencing of data is a feature of Transmission Control 
-    Protocol (TCP). this means that packets arrive in order at the receiver. | There is no sequencing of data in UDP. If the order is required, it has to be managed by the application layer. |
-    | Speed | TCP is comparatively slower than UDP. | UDP is faster, simpler, and more efficient than TCP. |
-    | Retransmission | Retransmission of lost packets is possible in TCP, but not in UDP. | There is no retransmission of lost packets in the User Datagram Protocol (UDP). |
-    | Header Length | TCP has a (20-60) bytes variable length header. | UDP has an 8 bytes fixed-length header. |
-    | Weight | TCP is heavy-weight. | UDP is lightweight. |
-    | Handshaking Techniques | Uses handshakes such as SYN, ACK, SYN-ACK | It’s a connectionless protocol i.e. No handshake |
-    | Broadcasting | TCP doesn’t support Broadcasting. | UDP supports Broadcasting. |
-    | Protocols | TCP is used by https://www.geeksforgeeks.org/difference-between-http-and-https-2/,https://www.geeksforgeeks.org/file-transfer-protocol-ftp/, https://www.geeksforgeeks.org/simple-mail-transfer-protocol-smtp/ and https://www.geeksforgeeks.org/introduction-to-telnet/. | UDP is used by https://www.geeksforgeeks.org/details-on-dns/, https://www.geeksforgeeks.org/dynamic-host-configuration-protocol-dhcp/, TFTP, https://www.geeksforgeeks.org/simple-network-management-protocol-snmp/, https://www.geeksforgeeks.org/routing-information-protocol-rip/, and https://www.geeksforgeeks.org/voice-over-internet-protocol-voip/. |
-    | Stream Type | The TCP connection is a byte stream. | UDP connection is a message stream. |
-    | Overhead | Low but higher than UDP. | Very low. |
-    | Applications | This protocol is primarily utilized in situations when a safe and trustworthy communication procedure is necessary, such as in email, on the web surfing, and in military services. | This protocol is used in situations where quick communication is necessary but where dependability is not a concern, such as VoIP, game streaming, video, and music streaming, etc. |
+| Basis | Transmission Control Protocol (TCP) | User Datagram Protocol (UDP) |
+|-------|------------------------------------|-----------------------------|
+| Type of Service | Connection-oriented | Datagram-oriented |
+| Reliability | Reliable | Not reliable |
+| Error checking mechanism | Extensive error-checking mechanisms | Basic error-checking mechanism using checksums |
+| Acknowledgment | An acknowledgment segment is present | No acknowledgment segment |
+| Sequence | Sequencing of data | No sequencing of data |
+| Speed | Comparatively slower | Faster, simpler, and more efficient |
+| Retransmission | Retransmission of lost packets is possible | No retransmission of lost packets |
+| Header Length | Variable length header (20-60 bytes) | Fixed-length header (8 bytes) |
+| Weight | Heavy-weight | Lightweight |
+| Handshaking Techniques | Uses handshakes such as SYN, ACK, SYN-ACK | No handshaking |
+| Broadcasting | Doesn't support Broadcasting | Supports Broadcasting |
+| Protocols | Used by HTTP, HTTPs, FTP, SMTP and Telnet | Used by DNS, DHCP, TFTP, SNMP, RIP, and VoIP |
+| Stream Type | Byte stream | Message stream |
+| Overhead | Low but higher than UDP | Very low |
+| Applications | Used in situations requiring safe and trustworthy communication (e.g., email, web surfing, military services) | Used in situations requiring quick communication but not concerned with reliability (e.g., VoIP, game streaming, video, and music streaming) |
 
 ## 5. Application Layer
 
